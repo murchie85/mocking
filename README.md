@@ -4,6 +4,7 @@
   
 
 Mocking a library for testing in Python. It allows you to `replace parts` of your system under test with `mock objects` and make assertions about how they have been used.
+Good explanation [here](https://youtu.be/_OyuFg9pGQg)
 
 
 - Form of stubbing objects
@@ -20,4 +21,32 @@ pip install mock
 ```
 
 
+unittest.mock used to imitate objects  
 
+## patch   
+  
+Replaces the real objects in the code with Mock instances.  
+
+
+`patch()` can be used as decorator or context manager (for scope)  
+  
+After scope exit - returns function to original self.  
+  
+
+
+ ## USAGE 
+
+
+```python
+from unittest.mock import Mock
+mock = Mock()
+print(mock) # prints ID
+
+# Pass mock as an argument to do_something()
+myDefinedFunction(mock)
+
+# Patch the json library
+json = mock
+```  
+  
+- Mock 
